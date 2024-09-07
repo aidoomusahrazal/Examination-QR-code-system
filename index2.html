@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Student Data</title>
+    <!-- Include your CSS and JavaScript libraries here -->
+    
+    <script src="fetch_student.php"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Search Student Data</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="search_term">Search Term</label>
+                <input type="text" name="search_term" id="search_term" class="form-control" required>
+            </div>
+            <button type="submit" name="search" class="btn btn-primary">Search</button>
+        </form>
+
+        <?php
+        if (isset($_POST['search'])) {
+            $searchTerm = $_POST['search_term'];
+            // Include your PHP code here to search and display student data based on the search term.
+        }
+        ?>
+
+        <!-- Display the search results here -->
+        <div class="results">
+            <!-- Include PHP code to display search results in a table or list format -->
+        </div>
+    </div>
+</body>
+</html>
